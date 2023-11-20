@@ -1,0 +1,83 @@
+<p>home works!</p>
+<app-navbar [nomeUsuario]="'Login'"></app-navbar>
+<div class="contain-fluid">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+        
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000" *ngFor="let b of bannerResult; let i=index">
+                    <img src="https://image.tmdb.org/t/p/original/{{b.backdrop_path }}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h2>{{ b.original_title }}</h2>
+                    <p>{{ b.overview }}</p>
+
+
+            </div></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="contain mt-3 p-4">
+    <div class="row">
+        <h5 class="text-white">Continue Assistindo</h5>
+        <div class="rowposter">
+            <ng-container *ngFor="let movie of trendingMovieResult">
+                <img 
+                src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}" 
+                class="rowing largeposter" 
+                alt="...">
+            </ng-container>
+            <div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="contain mt-3">
+        <div class="row">
+            <h5 class="text-white">Recomendações para Ti</h5>
+            <div class="rowposter">
+                <ng-container *ngFor="let tv of trendingTvResult">
+                    <img 
+                    src="https://image.tmdb.org/t/p/original/{{ tv.poster_path }}" 
+                    class="rowing largeposter" 
+                    alt="...">
+                </ng-container>
+                <div>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="contain mt-3">
+        <div class="row">
+            <h5 class="text-white">Novos Lançamentos</h5>
+            <div class="rowposter">
+                <ng-container *ngFor="let popular of popularResult">
+                    <img 
+                    src="https://image.tmdb.org/t/p/original/{{ popular.poster_path }}" 
+                    class="rowing largeposter" 
+                    alt="...">
+                </ng-container>
+                <div>
+                </div>
+            </div>
+    </div>
+
+            
+       

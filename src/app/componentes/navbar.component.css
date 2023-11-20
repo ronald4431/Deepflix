@@ -1,0 +1,12 @@
+.navbar .navbar-brand{
+    color: red;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: red;
+    -webkit-text-stroke-width: 0,2px;
+    -webkit-text-stroke-color: black;
+    
+}
